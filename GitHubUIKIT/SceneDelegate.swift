@@ -16,13 +16,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
          // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
          guard let windowScene = (scene as? UIWindowScene) else { return }
-         
-         let window = UIWindow(windowScene : windowScene)
-         window.rootViewController = ViewController()
+
+         let tabbar = UITabBarController()
+
+         let window = UIWindow(windowScene: windowScene)
          self.window = window
+         window.rootViewController = createTabbar()
          window.makeKeyAndVisible()
-         
+
      }
+
+    func createSearchNC() -> UINavigationController {
+        let searchVC =  SearchVC()
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+
+        return UINavigationController(rootViewController: searchVC)
+    }
+
+    func createFavoritesNC() -> UIViewController {
+        let favoritesListVC = FavoritesListVC()
+        favoritesListVC.title = "Favorites"
+        favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+
+        return UINavigationController(rootViewController: favoritesListVC)
+    }
+
+    func createTabbar() -> UITabBarController {
+        let tabbar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemGreen
+        tabbar.viewControllers = [createSearchNC(), createFavoritesNC()]
+
+        return tabbar
+    }
+
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -51,6 +78,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
 }
-
