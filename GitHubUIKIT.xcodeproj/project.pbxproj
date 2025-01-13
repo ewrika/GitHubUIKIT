@@ -15,6 +15,7 @@
 		E846709C2D330F3800D64A5D /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846709B2D330F3800D64A5D /* FavoritesListVC.swift */; };
 		E846709E2D34FD6200D64A5D /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846709D2D34FD6200D64A5D /* GFButton.swift */; };
 		E84670A02D3501D800D64A5D /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846709F2D3501D800D64A5D /* GFTextField.swift */; };
+		E84670A22D35226600D64A5D /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84670A12D35226600D64A5D /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E846709B2D330F3800D64A5D /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		E846709D2D34FD6200D64A5D /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		E846709F2D3501D800D64A5D /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		E84670A12D35226600D64A5D /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E84670992D330F0400D64A5D /* SearchVC.swift */,
 				E846709B2D330F3800D64A5D /* FavoritesListVC.swift */,
 				E846709F2D3501D800D64A5D /* GFTextField.swift */,
+				E84670A12D35226600D64A5D /* FollowerListVC.swift */,
 			);
 			path = GitHubUIKIT;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				E846709C2D330F3800D64A5D /* FavoritesListVC.swift in Sources */,
 				E846709E2D34FD6200D64A5D /* GFButton.swift in Sources */,
 				E846709A2D330F0400D64A5D /* SearchVC.swift in Sources */,
+				E84670A22D35226600D64A5D /* FollowerListVC.swift in Sources */,
 				E84670832D32F69600D64A5D /* AppDelegate.swift in Sources */,
 				E84670852D32F69600D64A5D /* SceneDelegate.swift in Sources */,
 			);
@@ -308,7 +312,6 @@
 				INFOPLIST_FILE = GitHubUIKIT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,7 +339,6 @@
 				INFOPLIST_FILE = GitHubUIKIT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
