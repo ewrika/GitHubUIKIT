@@ -52,18 +52,20 @@ class FollowerListVC: UIViewController {
         let minimumItemSpacing: CGFloat = 10
         let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
         let itemWidth = availableWidth / 3
-        
+
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
-        
+
         return flowLayout
     }
 
 
     func getFollower(username:String, page:Int) {
+        showLoadingView()
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
-            guard let self = self else {return}
+            guard let self = self else { return }
+            self.dismissLoadingView()
             switch result {
             case .success(let followers):
                 if followers.count < 100 { self.hasMoreFollowers = false }
