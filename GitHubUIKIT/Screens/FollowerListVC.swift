@@ -16,10 +16,10 @@ class FollowerListVC: UIViewController {
     var followers: [Follower] = []
     var page = 1
     var hasMoreFollowers = true
-    
+
     var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section,Follower>!
-    
+    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -48,7 +48,7 @@ class FollowerListVC: UIViewController {
 
     func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
         let width = view.bounds.width
-        let padding:CGFloat = 12
+        let padding: CGFloat = 12
         let minimumItemSpacing: CGFloat = 10
         let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
         let itemWidth = availableWidth / 3
@@ -60,8 +60,7 @@ class FollowerListVC: UIViewController {
         return flowLayout
     }
 
-
-    func getFollower(username:String, page:Int) {
+    func getFollower(username: String, page: Int) {
         showLoadingView()
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
@@ -85,7 +84,7 @@ class FollowerListVC: UIViewController {
     }
 
     func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section,Follower>(collectionView: collectionView, cellProvider: { (collectionView,indexPath,follower) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath)
             if let followerCell = cell as? FollowerCell {
                 followerCell.set(follower: follower)
@@ -96,27 +95,27 @@ class FollowerListVC: UIViewController {
         })
     }
 
-    func updateData(){
-        var snapshot = NSDiffableDataSourceSnapshot<Section,Follower>()
+    func updateData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
         DispatchQueue.main.async {
-            self.dataSource.apply(snapshot,animatingDifferences: true)
+            self.dataSource.apply(snapshot, animatingDifferences: true)
         }
     }
 
 }
 
-extension FollowerListVC:UICollectionViewDelegate {
+extension FollowerListVC: UICollectionViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
-        
+
 //        print("OffsetY = \(offsetY)")
 //        print("contentHeight = \(contentHeight)")
 //        print("height = \(height)")
-        
+
         if offsetY > contentHeight - height {
             guard hasMoreFollowers else { return }
             page += 1
