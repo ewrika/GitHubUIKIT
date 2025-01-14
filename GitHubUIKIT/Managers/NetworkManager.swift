@@ -7,22 +7,21 @@
 
 import Foundation
 
-
-class NetworkManager{
+class NetworkManager {
     static let shared = NetworkManager()
     let baseURL = "https://api.github.com/users/"
 
     private init() {}
 
-    func getFollowers(for username:String, page:Int, completed: @escaping (Result<[Follower],GFError>) -> Void) {
+    func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
         let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
 
-        guard let url = URL(string:endpoint) else {
+        guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidUsername))
             return
         }
 
-        let task = URLSession.shared.dataTask(with: url) { data, response , error in
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
                 completed(.failure(.unableToComplete))
             }
@@ -44,9 +43,9 @@ class NetworkManager{
             } catch {
                 completed(.failure(.invalidData))
             }
-            
+
         }
         task.resume()
     }
-    
+
 }
