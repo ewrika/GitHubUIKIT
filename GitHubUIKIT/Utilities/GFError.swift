@@ -1,5 +1,5 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GitHubUIKIT
 //
 //  Created by Георгий Борисов on 14.01.2025.

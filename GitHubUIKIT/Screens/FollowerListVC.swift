@@ -135,19 +135,19 @@ extension FollowerListVC: UICollectionViewDelegate {
             getFollower(username: username, page: page)
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let activeArray = isSearching ? filteredFollowers : followers
         let follower = activeArray[indexPath.item]
-        
+
         let destVC = UserInfoVC()
         destVC.username = follower.login
         let navController = UINavigationController(rootViewController: destVC)
         navController.sheetPresentationController?.prefersGrabberVisible = true
-            
+
         present(navController,animated: true)
     }
-    
+
 }
 
 extension FollowerListVC:UISearchResultsUpdating,UISearchBarDelegate {
