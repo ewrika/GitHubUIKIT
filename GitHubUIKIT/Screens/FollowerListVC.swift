@@ -48,7 +48,7 @@ class FollowerListVC: UIViewController {
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
-    
+
     func configureSearchController() {
         let searchController = UISearchController()
         searchController.searchResultsUpdater = self
@@ -56,7 +56,7 @@ class FollowerListVC: UIViewController {
         searchController.searchBar.placeholder = "Search for a username"
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
-        
+
     }
 
     func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
@@ -89,7 +89,7 @@ class FollowerListVC: UIViewController {
                     }
                     return
                 }
-                self.updateData(on:self.followers)
+                self.updateData(on: self.followers)
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
             }
@@ -145,14 +145,14 @@ extension FollowerListVC: UICollectionViewDelegate {
         let navController = UINavigationController(rootViewController: destVC)
         navController.sheetPresentationController?.prefersGrabberVisible = true
 
-        present(navController,animated: true)
+        present(navController, animated: true)
     }
 
 }
 
-extension FollowerListVC:UISearchResultsUpdating,UISearchBarDelegate {
+extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text , !filter.isEmpty else { return }
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
         isSearching = true
         filteredFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased()) }
         updateData(on: filteredFollowers)
