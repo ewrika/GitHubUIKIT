@@ -31,6 +31,7 @@
 		E8B272612D3A61B200DDE8E0 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B272602D3A61B200DDE8E0 /* GFUserInfoHeaderVC.swift */; };
 		E8C12CE22D3A63A400647D40 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CE12D3A63A400647D40 /* GFSecondaryTitleLabel.swift */; };
 		E8C12CE42D3BB00800647D40 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CE32D3BB00800647D40 /* GFItemInfoView.swift */; };
+		E8C12CE62D3BBC1B00647D40 /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CE52D3BBC1B00647D40 /* GFItemInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		E8B272602D3A61B200DDE8E0 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		E8C12CE12D3A63A400647D40 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		E8C12CE32D3BB00800647D40 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
+		E8C12CE52D3BBC1B00647D40 /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				E84670A72D355C9800D64A5D /* GFAlertVC.swift */,
 				E8B272602D3A61B200DDE8E0 /* GFUserInfoHeaderVC.swift */,
+				E8C12CE52D3BBC1B00647D40 /* GFItemInfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				E84670B92D35A80A00D64A5D /* GFError.swift in Sources */,
 				E84670A62D355B5C00D64A5D /* GFBodyLabel.swift in Sources */,
 				E84670B12D3589CC00D64A5D /* Follower.swift in Sources */,
+				E8C12CE62D3BBC1B00647D40 /* GFItemInfoVC.swift in Sources */,
 				E84670CA2D3901FB00D64A5D /* UserInfoVC.swift in Sources */,
 				E84670A42D3556E000D64A5D /* GFTitleLabel.swift in Sources */,
 				E84670B62D359B0A00D64A5D /* NetworkManager.swift in Sources */,
