@@ -42,3 +42,8 @@ class GFButton: UIButton {
     
 
 }
+
+
+#Preview {
+    return GFButton(backgroundColor: .blue, title: "Ok")
+}

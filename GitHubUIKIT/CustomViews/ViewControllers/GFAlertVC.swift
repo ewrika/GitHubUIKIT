@@ -98,3 +98,7 @@ class GFAlertVC: UIViewController {
     }
 
 }
+
+#Preview {
+    GFAlertVC(title: "Ошибка", message: "Что то пошло не так", buttonTitle: "Ок")
+}
