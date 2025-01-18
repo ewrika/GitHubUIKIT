@@ -26,7 +26,7 @@ class UserInfoVC: UIViewController {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
-    
+
     func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
             guard let self = self else {return}
@@ -42,7 +42,7 @@ class UserInfoVC: UIViewController {
 
         }
     }
-    
+
     func layoutUI() {
 
         itemViews = [headerView,itemViewOne,itemViewTwo]

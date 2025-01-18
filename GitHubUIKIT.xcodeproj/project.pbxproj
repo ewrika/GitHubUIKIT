@@ -30,6 +30,7 @@
 		E84670CA2D3901FB00D64A5D /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84670C92D3901FB00D64A5D /* UserInfoVC.swift */; };
 		E8B272612D3A61B200DDE8E0 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B272602D3A61B200DDE8E0 /* GFUserInfoHeaderVC.swift */; };
 		E8C12CE22D3A63A400647D40 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CE12D3A63A400647D40 /* GFSecondaryTitleLabel.swift */; };
+		E8C12CE42D3BB00800647D40 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CE32D3BB00800647D40 /* GFItemInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		E84670C92D3901FB00D64A5D /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		E8B272602D3A61B200DDE8E0 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		E8C12CE12D3A63A400647D40 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		E8C12CE32D3BB00800647D40 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				E84670C72D36FF8600D64A5D /* GFEmptyStateView.swift */,
+				E8C12CE32D3BB00800647D40 /* GFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C12CE42D3BB00800647D40 /* GFItemInfoView.swift in Sources */,
 				E84670B32D358B6700D64A5D /* User.swift in Sources */,
 				E84670A02D3501D800D64A5D /* GFTextField.swift in Sources */,
 				E846709C2D330F3800D64A5D /* FavoritesListVC.swift in Sources */,
