@@ -36,6 +36,7 @@
 		E8C12CEA2D3C406D00647D40 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CE92D3C406D00647D40 /* GFFollowerItemVC.swift */; };
 		E8C12CED2D3C50F300647D40 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CEC2D3C50F300647D40 /* Date+Ext.swift */; };
 		E8C12CEF2D3C512500647D40 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CEE2D3C512500647D40 /* String+Ext.swift */; };
+		E8C12CF12D3D63FD00647D40 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C12CF02D3D63FD00647D40 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		E8C12CE92D3C406D00647D40 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 		E8C12CEC2D3C50F300647D40 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		E8C12CEE2D3C512500647D40 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		E8C12CF02D3D63FD00647D40 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				E84670B52D359B0A00D64A5D /* NetworkManager.swift */,
+				E8C12CF02D3D63FD00647D40 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				E84670A82D355C9800D64A5D /* GFAlertVC.swift in Sources */,
 				E84670BC2D36589400D64A5D /* FollowerCell.swift in Sources */,
 				E84670C82D36FF8600D64A5D /* GFEmptyStateView.swift in Sources */,
+				E8C12CF12D3D63FD00647D40 /* PersistenceManager.swift in Sources */,
 				E84670B92D35A80A00D64A5D /* GFError.swift in Sources */,
 				E8C12CED2D3C50F300647D40 /* Date+Ext.swift in Sources */,
 				E84670A62D355B5C00D64A5D /* GFBodyLabel.swift in Sources */,

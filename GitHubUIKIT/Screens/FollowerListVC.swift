@@ -43,6 +43,9 @@ class FollowerListVC: UIViewController {
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
+        navigationItem.rightBarButtonItem = addButton
     }
 
     func configureCollectionView() {
@@ -151,6 +154,10 @@ extension FollowerListVC: UICollectionViewDelegate {
         navController.sheetPresentationController?.prefersGrabberVisible = true
 
         present(navController, animated: true)
+    }
+    
+    @objc func addButton(){
+        
     }
 
 }
