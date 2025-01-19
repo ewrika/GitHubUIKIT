@@ -8,8 +8,8 @@
 import UIKit
 
 protocol UserInfoVCDelegate: class {
-    func didTapGitHubProfile(user:User)
-    func didTapgetFollowers(user:User)
+    func didTapGitHubProfile(user: User)
+    func didTapgetFollowers(user: User)
 }
 
 class UserInfoVC: UIViewController {
@@ -58,48 +58,48 @@ class UserInfoVC: UIViewController {
 
         }
     }
-    
+
     func configureUIElements(with user: User) {
-        
+
     }
 
     func layoutUI() {
 
-        itemViews = [headerView,itemViewOne,itemViewTwo,dateLabel]
+        itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
 
         for itemView in itemViews {
             view.addSubview(itemView)
             itemView.translatesAutoresizingMaskIntoConstraints = false
-            
+
         }
 
-        //headerView.backgroundColor = .systemRed
-        //itemViewOne.backgroundColor = .systemRed
-        //itemViewTwo.backgroundColor = .cyan
+        // headerView.backgroundColor = .systemRed
+        // itemViewOne.backgroundColor = .systemRed
+        // itemViewTwo.backgroundColor = .cyan
 
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
-            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -padding),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             headerView.heightAnchor.constraint(equalToConstant: 180),
 
-            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor,constant: padding),
-            itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
-            itemViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -padding),
+            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
+            itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            itemViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
 
-            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor,constant: padding),
-            itemViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
-            itemViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -padding),
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
+            itemViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            itemViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
-            
-            dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor,constant: padding),
+
+            dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
             dateLabel.heightAnchor.constraint(equalToConstant: 18),
-            dateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
-            dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            dateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
         ])
     }
 
@@ -116,14 +116,13 @@ class UserInfoVC: UIViewController {
 }
 
 extension UserInfoVC: UserInfoVCDelegate {
-    
+
     func didTapGitHubProfile(user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user in invalid", buttonTitle: "ok")
             return
         }
-        
-        
+
         presentSafariVC(with: url)
 
     }

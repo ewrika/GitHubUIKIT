@@ -96,5 +96,3 @@ class GFUserInfoHeaderVC: UIViewController {
     }
 
 }
-
-

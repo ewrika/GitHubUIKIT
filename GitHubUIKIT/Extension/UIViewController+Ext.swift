@@ -55,11 +55,11 @@ extension UIViewController {
         emptyStateView.frame = view.bounds
         view.addSubview(emptyStateView)
     }
-    
-    func presentSafariVC(with url:URL) {
-        let safariVC = SFSafariViewController(url:url)
+
+    func presentSafariVC(with url: URL) {
+        let safariVC = SFSafariViewController(url: url)
         safariVC.preferredControlTintColor = .systemGreen
-        present(safariVC,animated:true)
+        present(safariVC, animated: true)
     }
-    
+
 }

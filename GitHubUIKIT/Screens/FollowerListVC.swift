@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol FollowerListVCDelegate:class {
-    func didRequestFollowers(for username:String)
+protocol FollowerListVCDelegate: class {
+    func didRequestFollowers(for username: String)
 }
 
 class FollowerListVC: UIViewController {
@@ -168,8 +168,7 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
     }
 }
 
-
-extension FollowerListVC:FollowerListVCDelegate {
+extension FollowerListVC: FollowerListVCDelegate {
     func didRequestFollowers(for username: String) {
         self.username = username
         title = username
